@@ -3,6 +3,7 @@ alias lsg="ls -la | grep"
 alias servercloset='ssh servercloset'
 alias seedbox='ssh canada4663@basilisk.seedboxes.cc'
 alias ipynotebook="cd ~/Dropbox/Projects/iPython;ipython notebook --pylab=inline --port=9999 --ip=*"
+alias aws="ssh -i ~/Dropbox/Projects/AWS/test_key.pem ubuntu@ec2-54-68-30-176.us-west-2.compute.amazonaws.com"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

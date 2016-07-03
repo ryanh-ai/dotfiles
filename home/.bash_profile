@@ -2,17 +2,15 @@ source ~/.bash_prompt
 source ~/.bashrc
 source ~/.alias
 
-#function gvim { /Applications/MacPorts/MacVim.app/Contents/MacOS/Vim -g $*;}
-#function tabtitle{ /bin/echo -e "\033];$*\007";}
-#function growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
+function tabtitle{ /bin/echo -e "\033];$*\007";}
 
 #Enable Bash Completion
-if [ -f /opt/local/etc/bash_completion ]; then
-	. /opt/local/etc/bash_completion
-fi
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
+#if [ -f /opt/local/etc/bash_completion ]; then
+#	. /opt/local/etc/bash_completion
+#fi
+#if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#    . $(brew --prefix)/etc/bash_completion
+#fi
 
 #PIP and virtualenv Stuff
 export PIP_RESPECT_VIRTUALENV=true
@@ -42,3 +40,5 @@ shopt -s histappend                      # append to history, don't overwrite it
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+#.alias .pipconfig .homebrewconfig .otherconfig

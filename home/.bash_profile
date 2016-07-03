@@ -23,7 +23,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 pyver=`python -c "from distutils import sysconfig; print sysconfig.get_python_version()"`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
 # Ensure user-installed binaries take precedence
-export PATH=/usr/local/share/python:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 #export PYTHONPATH=/usr/local/lib/python${pyver}/site-packages:$PYTHONPATH
 # hack gtk-2.0
 #export PYTHONPATH=/usr/local/lib/python${pyver}/site-packages/gtk-2.0:$PYTHONPATH

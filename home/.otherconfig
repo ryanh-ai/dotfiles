@@ -18,6 +18,8 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 #export HISTSIZE=100000                   # big big history
 #export HISTFILESIZE=100000               # big big history
 #shopt -s histappend                      # append to history, don't overwrite it
+#
+export PROJECT_HOME="~/Projects/"
 
 #homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"

@@ -7,3 +7,4 @@ gpip(){
        PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
 export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME="~/Projects/"

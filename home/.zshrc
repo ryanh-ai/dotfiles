@@ -1,7 +1,3 @@
-
-#export PATH="/usr/local/bin/:$PATH"
-#export MANPATH="/usr/local/man:$MANPATH"
-
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -35,7 +31,6 @@ antigen bundle common-aliases
 antigen bundle zsh-dircolors-solarized
 antigen bundle zsh-pip-completion
 
-
 # Load OS specific bundles
 if [[ `uname` == "Darwin" ]]; then
     antigen bundle brew
@@ -44,9 +39,8 @@ if [[ `uname` == "Darwin" ]]; then
     antigen bundle zsh-brew-services
 fi
 
-# Syntax highlighting bundle.
+# TODO: Syntax highlighting bundle.
 #antigen bundle zsh-users/zsh-syntax-highlighting
-
 
 # Load the theme.
 antigen theme robbyrussell

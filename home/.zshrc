@@ -51,31 +51,14 @@ fi
 # Load the theme.
 antigen theme robbyrussell
 
-# Play with virtualenv mod
-#function virtenv_indicator {
-#	if [[ -z $VIRTUAL_ENV ]] then
-#		psvar[1]=''
-#	else
-#		psvar[1]=${VIRTUAL_ENV##*/}
-#	fi
-#}
-#
-#add-zsh-hook precmd virtenv_indicator
-#PROMPT='%(1V.(%1v).)$PROMPT'
-
 # Tell antigen that you're done.
 antigen apply
-
-function virtualenv_info {
-	    [ $VIRTUAL_ENV ] && echo '['$fg[blue]`basename $VIRTUAL_ENV`%{$reset_color%}'] '
-}
-PROMPT='%{$fg_bold[white]%}%M $(virtualenv_info)${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)
-'
 
 
 source ~/.alias
 source ~/.pipconfig
 source ~/.homebrewconfig
 source ~/.otherconfig
+source ~/.zsh_theme
 
 homeshick --quiet refresh

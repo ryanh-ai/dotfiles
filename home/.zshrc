@@ -59,3 +59,5 @@ source ~/.pipconfig
 source ~/.homebrewconfig
 source ~/.otherconfig
 
+
+homeshick --quiet refresh

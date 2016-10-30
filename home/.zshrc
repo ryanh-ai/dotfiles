@@ -5,7 +5,13 @@ else
   export EDITOR='vim'
 fi
 
-source $(brew --prefix)/share/antigen/antigen.zsh
+if [[ `uname` == "Darwin" ]]; then
+  source $(brew --prefix)/share/antigen/antigen.zsh
+fi
+
+if [[ `uname` == "Linux" ]]; then
+  source ~/.antigen/antigen.zsh
+fi
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh

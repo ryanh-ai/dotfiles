@@ -1,1 +1,4 @@
-/Users/ryanhoium/.homesick/repos/virtualenvs-config/home/.virtualenvs/get_env_details
+#!/bin/bash
+# This hook is run when the list of virtualenvs is printed so each name can include details.
+# argument: environment name
+

@@ -1,1 +1,4 @@
-/Users/ryanhoium/.homesick/repos/virtualenvs-config/home/.virtualenvs/premkvirtualenv
+#!/bin/bash
+# This hook is run after a new virtualenv is created and before it is activated.
+# argument: name of new environment
+

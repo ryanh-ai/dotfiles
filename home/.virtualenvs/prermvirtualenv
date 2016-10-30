@@ -1,1 +1,4 @@
-/Users/ryanhoium/.homesick/repos/virtualenvs-config/home/.virtualenvs/prermvirtualenv
+#!/bin/bash
+# This hook is run before a virtualenv is deleted.
+# argument: full path to environment directory
+

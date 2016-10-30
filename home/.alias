@@ -1,6 +1,5 @@
 alias lsg="ls -la | grep"
 alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
 alias histgrep="history | grep "
 
 #FileSearch

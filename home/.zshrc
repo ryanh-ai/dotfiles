@@ -61,4 +61,4 @@ source ~/.homebrewconfig
 source ~/.otherconfig
 source ~/.zsh_theme
 
-homeshick --quiet refresh
+homeshick --quiet refresh 2

@@ -1,3 +1,13 @@
+#Profiling Hook for Profiling Startup Time
+PROFILE_STARTUP=false
+if [[ "$PROFILE_STARTUP" == true ]]; then
+	# http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+	PS4=$'%D{%M%S%.} %N:%i> '
+	exec 3>&2 2>$HOME/tmp/startlog.$$
+	setopt xtrace prompt_subst
+fi
+
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -62,3 +72,11 @@ source ~/.otherconfig
 source ~/.zsh_theme
 
 homeshick --quiet refresh 2
+#
+# Turn Off Profiling
+if [[ "$PROFILE_STARTUP" == true ]]; then
+    unsetopt xtrace
+    exec 2>&3 3>&-
+fi
+
+

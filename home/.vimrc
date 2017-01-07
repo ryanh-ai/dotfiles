@@ -14,13 +14,16 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'ivanov/vim-ipython'
 Plugin 'jnurmine/Zenburn'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+filetype plugin on	     " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -60,13 +63,25 @@ let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>?  :YcmCompleter GetDoc<CR>
 
+" Code Commenter Settings
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" " Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" " Align line-wise comment delimiters flush left instead of following code
+let g:NERDDefaultAlign = 'left'
+" " Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" " Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
 
 " Python Setups
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 | 
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set textwidth=110 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix

@@ -14,3 +14,6 @@ fi
 
 #homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+#source credentials / tokens not to be sync'd
+source "$HOME/.credentials/env_tokens.sh"

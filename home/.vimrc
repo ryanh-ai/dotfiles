@@ -19,6 +19,10 @@ Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'ivanov/vim-ipython'
 Plugin 'jnurmine/Zenburn'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -111,3 +115,6 @@ set backspace=indent,eol,start
 
 " Flag Unneeded Whitespace
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.cfn.json set ft=cfn_json
+au BufRead,BufNewFile *.cfn.yml set ft=cfn_yaml
+au BufRead,BufNewFile *.cfn.yaml set ft=cfn_yaml

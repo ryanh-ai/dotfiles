@@ -7,6 +7,9 @@ function f() { find . -iname "*$1*" ${@:2} }
 function r() { grep "$1" ${@:2} -R . }
 function mkcd() { mkdir -p "$@" && cd "$_"; }
 
+# Enable Current User Path for sudo Commands
+alias sudo='sudo env PATH=$PATH'
+
 # List all files colorized in long format
 alias ll='ls -lh'
 

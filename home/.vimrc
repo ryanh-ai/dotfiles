@@ -41,7 +41,8 @@ filetype plugin on	     " required
 " Window Management
 set background=dark
 colorscheme zenburn
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+"source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 set splitbelow
 set splitright
 "split navigations

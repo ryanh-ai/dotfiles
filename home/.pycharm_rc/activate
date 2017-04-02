@@ -1,0 +1,3 @@
+#!/bin/sh
+export ZDOTDIR=~/.pycharm_rc
+/usr/local/bin/zsh

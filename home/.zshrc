@@ -79,4 +79,4 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
     exec 2>&3 3>&-
 fi
 
-
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

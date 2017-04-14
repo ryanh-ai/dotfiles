@@ -18,12 +18,16 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'ivanov/vim-ipython'
 Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-obsession'
+Plugin 'jpalardy/vim-slime'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,9 +43,14 @@ filetype plugin on	     " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
+
 " Window Management
+set t_Co=256
 set background=dark
-colorscheme zenburn
+let g:solarized_termcolors = 16
+let g:solarized_contrast = "high"
+let g:zenburn_high_Contrast=1
+colorscheme solarized
 "source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 set splitbelow
@@ -106,6 +115,11 @@ let python_hightlight_all=1
 syntax on
 set nu
 
+"Python Setup for vim-slime to send snippets to other windows
+let g:slime_target = "tmux"
+let g:slime_paste_file = tempname()
+let g:slime_default_config = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
+let g:slime_python_ipython = 1
 
 " Other Setups
 set laststatus=2

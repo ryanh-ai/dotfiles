@@ -21,3 +21,7 @@ source "$HOME/.credentials/env_tokens.sh"
 #Enable AWS CLI completions
 source /usr/local/bin/aws_zsh_completer.sh
 
+#Disable Renaming of Windows
+DISABLE_AUTO_TITLE="true"
+
+

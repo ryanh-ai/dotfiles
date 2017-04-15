@@ -7,6 +7,8 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
 	setopt xtrace prompt_subst
 fi
 
+# Python Configuration so Variables Set for virtualenvwrapper plugin
+source ~/.pipconfig
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -66,7 +68,6 @@ antigen apply
 
 
 source ~/.alias
-source ~/.pipconfig
 source ~/.homebrewconfig
 source ~/.otherconfig
 source ~/.zsh_theme
@@ -78,5 +79,3 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
     unsetopt xtrace
     exec 2>&3 3>&-
 fi
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

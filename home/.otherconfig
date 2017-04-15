@@ -16,10 +16,14 @@ fi
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 #source credentials / tokens not to be sync'd
-source "$HOME/.credentials/env_tokens.sh"
+if [[ -a $HOME/.credentials/env_tokens.sh ]]; then
+	source "$HOME/.credentials/env_tokens.sh"
+fi 
 
 #Enable AWS CLI completions
-source /usr/local/bin/aws_zsh_completer.sh
+if [[ -a /usr/local/bin/aws_zsh_completer.sh ]]; then	
+	source "/usr/local/bin/aws_zsh_completer.sh"
+fi
 
 #Disable Renaming of Windows
 DISABLE_AUTO_TITLE="true"

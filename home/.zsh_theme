@@ -8,7 +8,6 @@ function virtualenv_info {
 
 if [[ -a '.host_nickname' ]] ; then
 	HOSTNAME=$(cat .host_nickname)
-	echo $HOSTNAME
 else
 	HOSTNAME=$(hostname -s)
 fi

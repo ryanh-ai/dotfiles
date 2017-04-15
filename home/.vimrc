@@ -116,10 +116,12 @@ syntax on
 set nu
 
 "Python Setup for vim-slime to send snippets to other windows
-let g:slime_target = "tmux"
-let g:slime_paste_file = tempname()
-let g:slime_default_config = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
-let g:slime_python_ipython = 1
+if !empty($TMUX)
+	let g:slime_target = "tmux"
+	let g:slime_paste_file = tempname()
+	let g:slime_default_config = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
+	let g:slime_python_ipython = 1
+endif
 
 " Other Setups
 set laststatus=2

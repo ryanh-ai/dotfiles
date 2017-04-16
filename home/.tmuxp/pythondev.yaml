@@ -1,0 +1,22 @@
+session_name: ${VIRTUAL_ENV_NAME}
+shell_command_before: "workon ${VIRTUAL_ENV_NAME}"
+windows:
+- layout: c0a1,208x54,0,0,4
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+  window_name: term
+- focus: 'true' 
+  layout: 7186,208x54,0,0[208x42,0,0{124x42,0,0,1,83x42,125,0,2},208x11,0,43,3]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+    - "vim -c 'NERDTree .'"
+  - shell_command:
+    - ipython
+  - shell_command:
+    - "top -o cpu"
+  window_name: main

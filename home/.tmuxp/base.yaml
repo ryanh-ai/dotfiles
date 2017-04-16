@@ -1,0 +1,13 @@
+session_name: base
+windows:
+- focus: 'true'
+  layout: 7181,208x54,0,0[208x42,0,0{124x42,0,0,0,83x42,125,0,2},208x11,0,43,1]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command:
+  - shell_command:
+  - shell_command:
+    - "top -o cpu"
+  window_name: main

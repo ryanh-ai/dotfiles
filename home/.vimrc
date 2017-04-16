@@ -51,7 +51,6 @@ let g:solarized_termcolors = 16
 let g:solarized_contrast = "high"
 let g:zenburn_high_Contrast=1
 colorscheme solarized
-"source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 set splitbelow
 set splitright
@@ -65,7 +64,6 @@ nnoremap <C-H> <C-W><C-H>
 " File Tree Setup
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let g:Powerline_symbols = 'fancy'
-
 
 " Folding Configuration
 "set foldmethod=indent

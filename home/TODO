@@ -17,6 +17,7 @@ TODO bootstrap
 core packages for working env working across *nix
 EMR bootstrap for spark / ipython shell
 deployement of helper scripts
+compinit error fixed with: compaudit | xargs chmod g-w
 
 TODO cloud
 helper scripts ? ?

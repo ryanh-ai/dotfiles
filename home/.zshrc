@@ -9,6 +9,7 @@ fi
 
 # Python Configuration so Variables Set for virtualenvwrapper plugin
 source ~/.pipconfig
+source ~/.homebrewconfig
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -68,7 +69,6 @@ antigen apply
 
 
 source ~/.alias
-source ~/.homebrewconfig
 source ~/.otherconfig
 source ~/.zsh_theme
 

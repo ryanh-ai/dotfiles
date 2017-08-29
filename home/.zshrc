@@ -49,6 +49,7 @@ antigen bundle HeroCC/LS_COLORS
 antigen bundle common-aliases
 antigen bundle zsh-dircolors-solarized
 antigen bundle zsh-pip-completion
+# antigen bundle vi-mode
 
 # Load OS specific bundles
 if [[ `uname` == "Darwin" ]]; then

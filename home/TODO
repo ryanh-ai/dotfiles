@@ -5,13 +5,14 @@ aws cli / ssh shortcuts
 iterm2 / tmux color scheme - light and dark working
 
 TODO .dotfiles tmux
-auto-recover on reboot
-embedded tmux --> handling bind key without double pressing
+TESTING - auto-recover on reboot
+TESTING - embedded tmux --> handling bind key without double pressing
 
 TODO .dotfiles vim
 arrive at clean python / js / yaml completion
 templating for common patterns
-syntax highlighting
+snippits
+TESTING - syntax highlighting
 
 TODO bootstrap
 core packages for working env working across *nix

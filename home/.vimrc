@@ -15,7 +15,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-"Plugin 'ivanov/vim-ipython'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -49,7 +48,6 @@ set t_Co=256
 set background=dark
 let g:solarized_termcolors = 16
 let g:solarized_contrast = "high"
-let g:zenburn_high_Contrast=1
 colorscheme solarized
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 set splitbelow
@@ -128,6 +126,7 @@ set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
 set backspace=indent,eol,start
+set mouse=a
 
 " Flag Unneeded Whitespace
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/

@@ -13,13 +13,16 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
+Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+Plugin 'ambv/black'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-obsession'
@@ -105,17 +108,20 @@ au BufNewFile,BufRead *.py
 set encoding=utf-8
 set showmatch
 "python with virtualenv support
-py << EOF
+py3 << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
 	project_base_dir = os.environ['VIRTUAL_ENV']
 	activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-	execfile(activate_this, dict(__file__=activate_this))
+	exec(open(activate_this, 'r').read(), dict(__file__=activate_this))
 EOF
+
 let python_hightlight_all=1
 syntax on
 set nu
+
+
 
 "Python Setup for vim-slime to send snippets to other windows
 if !empty($TMUX)
@@ -159,3 +165,7 @@ set mouse=a
 au BufRead,BufNewFile *.cfn.json set ft=cfn_json
 au BufRead,BufNewFile *.cfn.yml set ft=cfn_yaml
 au BufRead,BufNewFile *.cfn.yaml set ft=cfn_yaml
+
+
+
+

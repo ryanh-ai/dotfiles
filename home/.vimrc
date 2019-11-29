@@ -53,6 +53,7 @@ filetype plugin on	     " required
 "
 
 " Window Management
+set t_RB=
 set t_Co=256
 set background=dark
 let g:solarized_termcolors = 16
@@ -79,7 +80,7 @@ nnoremap <space> za
 let g:SimpylFold_docstring_preview=1
 
 " Code Completion
-let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_completion=0
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>?  :YcmCompleter GetDoc<CR>
 

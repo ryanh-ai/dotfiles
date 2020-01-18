@@ -34,7 +34,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'prettier/vim-prettier'
 Plugin 'mxw/vim-jsx'
-" Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line

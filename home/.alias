@@ -1,11 +1,14 @@
 alias lsg="ls -la | grep"
 alias zshconfig="vim ~/.zshrc"
 alias histgrep="history | grep "
+alias histg="history | grep "
 
 #FileSearch
 function f() { find . -iname "*$1*" ${@:2} }
 function r() { grep "$1" ${@:2} -R . }
 function mkcd() { mkdir -p "$@" && cd "$_"; }
+function assh() {AUTOSSH_PORT=0 autossh -t "$@" 'tmuxp load base -y'}
+compdef assh=ssh
 
 # Enable Current User Path for sudo Commands
 alias sudo='sudo env PATH=$PATH'

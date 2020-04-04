@@ -29,7 +29,8 @@ fi
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-#plugins=(git dircycle colored-man colorize github virtualenv zsh-syntax-highlighting git-extras history osx pip python screen sudo virtualenvwrapper aws brew)
+export ZSH_TMUX_AUTOSTART=true
+
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle pip
@@ -49,6 +50,7 @@ antigen bundle HeroCC/LS_COLORS
 antigen bundle common-aliases
 antigen bundle zsh-dircolors-solarized
 antigen bundle zsh-pip-completion
+antigen bundle tmux
 # antigen bundle vi-mode
 
 # Load OS specific bundles

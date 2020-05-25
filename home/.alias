@@ -9,6 +9,7 @@ function r() { grep "$1" ${@:2} -R . }
 function mkcd() { mkdir -p "$@" && cd "$_"; }
 function assh() {AUTOSSH_PORT=0 autossh -t "$@" 'tmuxp load base -y'}
 compdef assh=ssh
+function mkvirt(){mkvirtualenv -a . "${PWD##*/}" --python=$(which python3)}
 
 # Enable Current User Path for sudo Commands
 alias sudo='sudo env PATH=$PATH'

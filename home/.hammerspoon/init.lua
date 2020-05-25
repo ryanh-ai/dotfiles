@@ -67,7 +67,7 @@ Install:andUse("WindowScreenLeftAndRight",
 
 Install:andUse("WindowGrid",
                {
-                 config = { gridGeometries = { { "6x4" } } },
+                 config = { gridGeometries = { { "8x4" } } },
                  hotkeys = {show_grid = {hyper, "g"}},
                  start = true
                }

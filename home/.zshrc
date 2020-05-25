@@ -29,7 +29,6 @@ fi
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-export ZSH_TMUX_AUTOSTART=true
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
@@ -50,7 +49,7 @@ antigen bundle HeroCC/LS_COLORS
 antigen bundle common-aliases
 antigen bundle zsh-dircolors-solarized
 antigen bundle zsh-pip-completion
-antigen bundle tmux
+# antigen bundle tmux
 # antigen bundle vi-mode
 
 # Load OS specific bundles
@@ -75,7 +74,6 @@ source ~/.alias
 source ~/.otherconfig
 source ~/.zsh_theme
 
-homeshick --quiet refresh 2
 #
 # Turn Off Profiling
 if [[ "$PROFILE_STARTUP" == true ]]; then
@@ -83,11 +81,4 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
     exec 2>&3 3>&-
 fi
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-#Autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+y | homeshick --quiet refresh 2

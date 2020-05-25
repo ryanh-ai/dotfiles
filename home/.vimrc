@@ -18,7 +18,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -51,13 +52,25 @@ filetype plugin on	     " required
 " Put your non-Plugin stuff after this line
 "
 
+" Other Setups
+set laststatus=2
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+set backspace=indent,eol,start
+set mouse=a
+
+
 " Window Management
 set t_RB=
-set t_Co=256
-set background=dark
-let g:solarized_termcolors = 16
-let g:solarized_contrast = "high"
-colorscheme solarized
+" set t_Co=256
+" let g:solarized_termcolors = 16
+" let g:solarized_contrast = "high"
+colorscheme solarized8_high
+let g:solarized_use16 = 1
+let g:solarized_extra_hi_groups = 1
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 set splitbelow
 set splitright
@@ -149,16 +162,6 @@ augroup javascript_folding
     au!
     au FileType javascript setlocal foldmethod=syntax
 augroup END
-
-
-" Other Setups
-set laststatus=2
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-set termencoding=utf-8
-set backspace=indent,eol,start
-set mouse=a
 
 " Flag Unneeded Whitespace
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/

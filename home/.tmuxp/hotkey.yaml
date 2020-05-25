@@ -5,6 +5,5 @@ windows:
   options: {}
   panes:
   - focus: 'true'
-    shell_command: Python
   start_directory: /Users/rhoium
   window_name: scratch

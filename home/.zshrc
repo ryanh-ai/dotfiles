@@ -71,6 +71,7 @@ antigen apply
 
 
 source ~/.alias
+#source ~/.nvmconfig
 source ~/.otherconfig
 source ~/.zsh_theme
 
@@ -81,4 +82,4 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
     exec 2>&3 3>&-
 fi
 
-y | homeshick --quiet refresh 2
+yes | homeshick --quiet refresh 2

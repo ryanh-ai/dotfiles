@@ -9,6 +9,11 @@ if [[ `uname` == "Darwin" ]]; then
    export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 fi 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 #iterm shell integration activation
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
@@ -59,4 +64,4 @@ alias awswho="aws configure list"
 DISABLE_AUTO_TITLE="true"
 
 #Path
-export PATH=$PATH:/snap/bin
+export PATH=$PATH:/snap/bin:~/.toolbox/bin

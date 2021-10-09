@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #Profiling Hook for Profiling Startup Time
 PROFILE_STARTUP=false
 if [[ "$PROFILE_STARTUP" == true ]]; then
@@ -64,7 +71,8 @@ fi
 #antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme robbyrussell
+#antigen theme robbyrussell
+antigen theme romkatv/powerlevel10k
 
 # Tell antigen that you're done.
 antigen apply
@@ -73,7 +81,8 @@ antigen apply
 source ~/.alias
 #source ~/.nvmconfig
 source ~/.otherconfig
-source ~/.zsh_theme
+#source ~/.zsh_theme
+#ZSH_THEME='robbyrussell'
 
 #
 # Turn Off Profiling
@@ -83,3 +92,11 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
 fi
 
 yes | homeshick --quiet refresh 2
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

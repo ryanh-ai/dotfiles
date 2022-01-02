@@ -100,3 +100,4 @@ export PATH="/usr/local/opt/node@14/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"

@@ -1,0 +1,82 @@
+"" Source your .vimrc
+"source ~/.vimrc
+" Ideas: https://towardsdatascience.com/the-essential-ideavim-remaps-291d4cd3971b
+
+let mapleader="\\"
+"set backspace=indent,eol,start
+
+let g:argtextobj_pairs="[:],(:),<:>"
+set ideastatusicon=gray
+set ideastatusicon=gray
+set showmode
+
+Plug 'preservim/nerdtree'
+Plug 'machakann/vim-highlightedyank'
+
+" Use Mac clipboard
+set clipboard+=unnamed
+set clipboard+=ideaput
+set ideamarks
+
+"enable :command completion
+set wildmenu
+set wildmode=longest,list,full
+
+set number relativenumber
+
+" editing .ideavimrc
+nnoremap <leader>e :e ~/.ideavimrc<CR>
+nnoremap <leader>si :action IdeaVim.ReloadVimRc.reload<CR>
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+map ,d <Action>(Debug)
+map ,r <Action>(RunClass)
+map ,b <Action>(ToggleLineBreakpoint)
+
+nnoremap <leader>T :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>tt :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>s :action SearchEverywhere<CR>
+nnoremap <leader>c :action ActivatePythonConsoleToolWindow<CR>
+
+map gd <Action>(QuickJavaDoc)
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotToDeclaration<CR>
+nnoremap gp :action GotToSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+
+"Window Management
+nnoremap <c-\> :action SplitVertically<CR>
+nnoremap <c--> :action SplitHorizontally<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <TAB> :action NextTab<CR>
+nnoremap <Leader>en :action EditSourceInNewWindow<CR>
+nnoremap <Leader>n :action NextWindow<CR>
+"nnoremap <Leader>q :action CloseContent<CR>
+"nnoremap <Leader>qa :action CloseAllEditors<CR>
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc

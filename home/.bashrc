@@ -11,3 +11,4 @@ gpip(){
 export WORKON_HOME=~/.virtualenvs
 # AWS CLI Completer
 complete -C aws_completer aws
+export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"

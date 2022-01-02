@@ -42,3 +42,4 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 #.alias .pipconfig .homebrewconfig .otherconfig
+export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"

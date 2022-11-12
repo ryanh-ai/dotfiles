@@ -64,4 +64,8 @@ alias awswho="aws configure list"
 DISABLE_AUTO_TITLE="true"
 
 #Path
-export PATH=$PATH:/snap/bin:~/.toolbox/bin
+export PATH=$PATH:/snap/bin:~/.toolbox/bin:~/.bin:~/workplace/sensai_support_tools/cred_helper
+
+#setting for duplicitity 
+ulimit -n 1024
+

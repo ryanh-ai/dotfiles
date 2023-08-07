@@ -15,8 +15,8 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
 fi
 
 # Python Configuration so Variables Set for virtualenvwrapper plugin
-source ~/.pipconfig
 source ~/.homebrewconfig
+source ~/.pipconfig
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -95,9 +95,7 @@ yes | homeshick --quiet refresh 2
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="/usr/local/opt/node@14/bin:$PATH"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
+source /Users/rhoium/.brazil_completion/zsh_completion

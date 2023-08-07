@@ -1,7 +1,8 @@
 # homebrew
-pyver=`python -c "from distutils import sysconfig; print(sysconfig.get_python_version())"`
+eval "$(/opt/homebrew/bin/brew shellenv)"
+pyver=`python3 -c "from distutils import sysconfig; print(sysconfig.get_python_version())"`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-# Ensure user-installed binaries take precedence
-export PATH=/usr/local/bin:$PATH
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+#Java Info
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME="/opt/homebrew/opt/openjdk"
+export PATH="$(brew --prefix)/node@14/bin:$PATH"

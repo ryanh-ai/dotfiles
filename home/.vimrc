@@ -29,11 +29,11 @@ Plugin 'tpope/vim-obsession'
 Plugin 'jpalardy/vim-slime'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'majutsushi/tagbar'
-Plugin 'pangloss/vim-javascript'
+"Plugin 'pangloss/vim-javascript'
 " Plugin 'chemzqm/vim-jsx-improve'
-Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'prettier/vim-prettier'
-Plugin 'mxw/vim-jsx'
+"Plugin 'maxmellon/vim-jsx-pretty'
+"Plugin 'prettier/vim-prettier'
+"Plugin 'mxw/vim-jsx'
 "Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -145,9 +145,9 @@ endif
 
 "Javascript / React / JSX Setup
 let g:jsx_ext_required = 0
-autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd BufWritePre *.js :normal gggqG
-autocmd BufWritePre *.jsx :normal gggqG
+"autocmd FileType javascript set formatprg=prettier\ --stdin
+"autocmd BufWritePre *.js :normal gggqG
+"autocmd BufWritePre *.jsx :normal gggqG
 au BufNewFile,BufRead *.js,*.jsx
     \ set tabstop=2 |
     \ set softtabstop=2 | 
@@ -157,10 +157,10 @@ au BufNewFile,BufRead *.js,*.jsx
     \ set autoindent |
     \ set fileformat=unix
 set encoding=utf-8
-augroup javascript_folding
-    au!
-    au FileType javascript setlocal foldmethod=syntax
-augroup END
+"augroup javascript_folding
+"    au!
+"    au FileType javascript setlocal foldmethod=syntax
+"augroup END
 
 " Flag Unneeded Whitespace
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/

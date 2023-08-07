@@ -43,3 +43,4 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 #.alias .pipconfig .homebrewconfig .otherconfig
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
+. "$HOME/.cargo/env"

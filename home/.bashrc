@@ -13,4 +13,4 @@ export WORKON_HOME=~/.virtualenvs
 complete -C aws_completer aws
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
 . "$HOME/.cargo/env"
-source /Users/rhoium/.brazil_completion/bash_completion
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH

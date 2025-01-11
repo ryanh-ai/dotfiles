@@ -64,7 +64,8 @@ alias awswho="aws configure list"
 DISABLE_AUTO_TITLE="true"
 
 #Path
-export PATH=$PATH:/snap/bin:~/.toolbox/bin:~/.bin:~/workplace/sensai_support_tools/cred_helper
+export PATH=$PATH:/snap/bin:~/.toolbox/bin:~/.bin
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 #setting for duplicitity 
 ulimit -n 1024

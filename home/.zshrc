@@ -15,7 +15,9 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
 fi
 
 # Python Configuration so Variables Set for virtualenvwrapper plugin
-source ~/.homebrewconfig
+if [[ `uname` == Darwin ]]; then
+	source ~/.homebrewconfig
+fi
 source ~/.pipconfig
 
 # Preferred editor for local and remote sessions
@@ -25,9 +27,12 @@ else
   export EDITOR='vim'
 fi
 
+[[ -s $HOME.autojump/etc/profile.d/autojump.sh ]] && source $HOME.autojump/etc/profile.d/autojump.sh
+
 if [[ `uname` == "Darwin" ]]; then
   source $(brew --prefix)/share/antigen/antigen.zsh
 fi
+
 
 if [[ `uname` == "Linux" ]]; then
   source ~/.antigen/antigen.zsh
@@ -98,4 +103,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
-source /Users/rhoium/.brazil_completion/zsh_completion
+[[ ! -f ~/.brazil_completion/zsh_completion ]] || source $HOME/.brazil_completion/zsh_completion
+
+# if you wish to use IMDS set AWS_EC2_METADATA_DISABLED=false
+
+export AWS_EC2_METADATA_DISABLED=true
+
+PATH=$PATH:/apollo/env/CodeSearchCLI/bin/

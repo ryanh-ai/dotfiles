@@ -18,8 +18,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jnurmine/Zenburn'
-" Plugin 'altercation/vim-colors-solarized'
-Plugin 'lifepillar/vim-solarized8'
+Plugin 'altercation/vim-colors-solarized'
+" Plugin 'lifepillar/vim-solarized8'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -53,7 +53,7 @@ filetype plugin on	     " required
 
 " Other Setups
 set laststatus=2
-set t_Co=256
+set t_Co=16
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
@@ -62,11 +62,11 @@ set mouse=a
 
 
 " Window Management
-set t_RB=
+" set t_RB=
 " set t_Co=256
 " let g:solarized_termcolors = 16
 " let g:solarized_contrast = "high"
-colorscheme solarized8_high
+colorscheme solarized
 let g:solarized_use16 = 1
 let g:solarized_extra_hi_groups = 1
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>

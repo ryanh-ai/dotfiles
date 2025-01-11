@@ -6,16 +6,15 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 gpip(){
        PIP_REQUIRE_VIRTUALENV="" $(which pip3) "$@"
 }
-
-if [[ "$(uname)" == "Darwin" ]]; then
-    # macOS (Darwin) - use Homebrew's Python
+export VIRTUALENV_WRAPPER_PYTHON="$(brew --prefix)/bin/python3"
+export VIRTUALENVWRAPPER_PYTHON="$(brew --prefix)/bin/python3"
+# Platform-specific Python path
+if [[ $(uname) == "Darwin" ]]; then
     export VIRTUALENV_WRAPPER_PYTHON="$(brew --prefix)/bin/python3"
     export VIRTUALENVWRAPPER_PYTHON="$(brew --prefix)/bin/python3"
-else
-    # Other Unix-like systems - use system Python3
-    export VIRTUALENV_WRAPPER_PYTHON="$(which python3)"
-    export VIRTUALENVWRAPPER_PYTHON="$(which python3)"
+elif [[ $(uname) == "Linux" ]]; then
+    export VIRTUALENV_WRAPPER_PYTHON="/usr/bin/python3"
+    export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 fi
-
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Projects/"

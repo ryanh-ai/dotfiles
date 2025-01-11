@@ -1,18 +1,10 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
-#Profiling Hook for Profiling Startup Time
-PROFILE_STARTUP=false
-if [[ "$PROFILE_STARTUP" == true ]]; then
-	# http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
-	PS4=$'%D{%M%S%.} %N:%i> '
-	exec 3>&2 2>$HOME/tmp/startlog.$$
-	setopt xtrace prompt_subst
-fi
 
 # Python Configuration so Variables Set for virtualenvwrapper plugin
 if [[ `uname` == Darwin ]]; then
@@ -61,8 +53,7 @@ antigen bundle HeroCC/LS_COLORS
 antigen bundle common-aliases
 antigen bundle zsh-dircolors-solarized
 antigen bundle zsh-pip-completion
-# antigen bundle tmux
-# antigen bundle vi-mode
+antigen bundle dotenv
 
 # Load OS specific bundles
 if [[ `uname` == "Darwin" ]]; then
@@ -86,27 +77,28 @@ antigen apply
 source ~/.alias
 #source ~/.nvmconfig
 source ~/.otherconfig
-#source ~/.zsh_theme
-#ZSH_THEME='robbyrussell'
+[[ ! -f ~/Projects/litellm-proxy-prod/.gpt-alias ]] || source ~/Projects/litellm-proxy-prod/.gpt-alias
 
 #
-# Turn Off Profiling
-if [[ "$PROFILE_STARTUP" == true ]]; then
-    unsetopt xtrace
-    exec 2>&3 3>&-
-fi
 
 yes | homeshick --quiet refresh 2
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
+  typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+  POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+  ZSH_THEME="simple"
+else
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+fi
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
 [[ ! -f ~/.brazil_completion/zsh_completion ]] || source $HOME/.brazil_completion/zsh_completion
 
 # if you wish to use IMDS set AWS_EC2_METADATA_DISABLED=false
-
 export AWS_EC2_METADATA_DISABLED=true
-
 PATH=$PATH:/apollo/env/CodeSearchCLI/bin/
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

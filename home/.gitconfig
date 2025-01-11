@@ -1,6 +1,6 @@
 [user]
-	name = canada4663
-	email = 3118399+canada4663@users.noreply.github.com
+	name = Ryan H
+	email = 3118399+ryanh-ai@users.noreply.github.com
 
 [credential]
 	helper = cache --timeout=43200
@@ -36,10 +36,10 @@
     hunk-header-style = file line-number syntax
 [credential "https://github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !/usr/bin/env gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
+	helper = !/usr/bin/env gh auth git-credential
 [color]
 	ui = auto
 [push]

@@ -8,5 +8,13 @@ gpip(){
 }
 export VIRTUALENV_WRAPPER_PYTHON="$(brew --prefix)/bin/python3"
 export VIRTUALENVWRAPPER_PYTHON="$(brew --prefix)/bin/python3"
+# Platform-specific Python path
+if [[ $(uname) == "Darwin" ]]; then
+    export VIRTUALENV_WRAPPER_PYTHON="$(brew --prefix)/bin/python3"
+    export VIRTUALENVWRAPPER_PYTHON="$(brew --prefix)/bin/python3"
+elif [[ $(uname) == "Linux" ]]; then
+    export VIRTUALENV_WRAPPER_PYTHON="/usr/bin/python3"
+    export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
+fi
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Projects/"

@@ -20,6 +20,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'jnurmine/Zenburn'
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'vimpostor/vim-lumen'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
